@@ -1,0 +1,20 @@
+//GET http://localhost:8080/groups/g1
+{"id":"g1","name":"Group 1","users":["u1"]}
+
+//GET http://localhost:8080/groups
+[{"id":"g1","name":"Group 1"}]
+
+//POST  http://localhost:8080/groups
+//Content-Type: application/json
+{"name":"Group 2","users":["u1"]}
+//id will be assigned automatically
+
+//GET http://localhost:8080/groups?name=Group+1
+[{"id":"g1","name":"Group 1"}]
+
+//PUT  http://localhost:8080/groups
+//id is required
+{"id":"g2","name":"Group 2","users":["u1"]}
+
+//DELETE http://localhost:8080/groups/g1
+//delete the group with id=g1

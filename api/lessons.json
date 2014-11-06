@@ -1,0 +1,20 @@
+//GET http://localhost:8080/lessons/2014-08-01/g1
+{"id":"l1","date":"2014-08-01","group":"g1","words":["w1"]}
+
+//GET http://localhost:8080/lessons
+[{"id":"l1","date":"2014-08-01","group":"g1"}]
+
+//POST  http://localhost:8080/lessons
+//Content-Type: application/json
+{"date":"2014-08-02","group":"g1","words":["w1"]}
+//id will be assigned automatically
+
+//GET http://localhost:8080/lessons?date=2014-08-01&group=g1
+[{"id":"l1","date":"2014-08-01","group":"g1"}]
+
+//PUT  http://localhost:8080/lessons
+//id is required
+{"id":"l1","date":"2014-08-02","group":"g1","words":["w1"]}
+
+//DELETE http://localhost:8080/lessons/l1
+//delete the lesson with id=l1

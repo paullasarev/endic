@@ -1,0 +1,21 @@
+//GET http://localhost:8080/users/u1
+{"id":"u1","login":"admin","name":"Admin"}
+
+//GET http://localhost:8080/users
+[{"id":"u1","login":"admin","name":"Admin"}] 
+
+//POST  http://localhost:8080/users
+//Content-Type: application/json
+{"login":"admin","name":"Admin", "password":"pass"}
+//id will be assigned automatically
+
+//GET http://localhost:8080/users?login=admin
+[{"id":"u1","login":"admin","name":"Admin"}] 
+
+//PUT  http://localhost:8080/users
+//id is required
+{"id":"u1","login":"user1","name":"User 1", "password":"pass1"}
+
+//DELETE http://localhost:8080/users/u1
+//delete the user with id=u1
+

@@ -1,0 +1,67 @@
+//get word request:
+//GET http://localhost:8080/words/w1
+//responce:
+//Content-Type: application/json
+//Content-Length: 16
+//body:
+{
+  "id":"w1",
+  "meaning":"",
+  "partofspeech":"exclamation",
+  "word":"hello",
+  "definition":"used when meeting or greeting someone",
+  "transcription":"/hel╦И╔Щ╩К/",
+  "translation":"╨Я╤А╨╕╨▓╨╡╤В",
+  "examples":[
+  "Hello, Paul. I haven't seen you for ages."
+  ]
+}
+
+//get word head request:
+//HEAD http://localhost:8080/words/w1
+//responce:
+//Content-Type: application/json
+//Content-Length: 16
+//body: nothing
+
+
+//get list of words request:
+//GET http://localhost:8080/words
+[
+{"id":"w1", "word":"hello","definition":"used when meeting or greeting someone"},
+{"id":"w2", "word":"world","definition":""},
+{"id":"w3", "word":"aa","definition":""}
+]
+
+//POST  http://localhost:8080/words
+//request
+//Content-Type: application/json
+//Content-Length: 15//responce
+{
+  "word":"name",
+  "definition":"some name",
+}
+//responce
+//HTTP/1.1 200 OK
+//id will be assigned automatically
+
+//GET http://localhost:8080/words?word=hello
+[{"id":"w1","word":"hello","meaning":"","partofspeech":"exclamation","definition":"used when meeting or greeting someone"}]
+
+//GET http://localhost:8080/words?word=make&meaning=produce
+[{"id":"w3","word":"make","meaning":"produce","partofspeech":"verb","definition":"to produce something, often using a particular substance or material"}]
+
+//PUT  http://localhost:8080/words
+//id is required
+{
+  "id": "w1",
+  "word":"name",
+  "definition":"some name",
+}
+
+//DELETE http://localhost:8080/words/w1
+//delete the word with id=w1
+
+///GET http://localhost:8080/words?group=g4&date=2014-08-01
+// return words list which belongs to lesson with group=g4 and date=2014-08-01
+[{}]
