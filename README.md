@@ -1,0 +1,4 @@
+endic
+=====
+
+sample dictionary app
